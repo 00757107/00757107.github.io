@@ -1,1 +1,1519 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            motorcycle_introduction
+        </title>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css'>
+        <link rel="stylesheet" href="my.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                setTimeout(function() {
+                    $("#load").fadeOut('slow');
+                    $('.loading').css("display","none");
+                },3000);
+                
+            });
 
+            /* Thanks to Chris Deacy */
+            var show,show50,show100,show125,show150,information,buycar;
+            var share0,share1,share2,share3,share4,share5,share6,share7,share8;
+            var time,now,x;
+            var retrofit0 ,retrofit1,retrofit2,retrofit3,retrofit4,retrofit5,retrofit6,retrofit7;
+            // var showinformation,showbuycar;
+            var contactshow;
+            function start()
+            {
+                contactshow = document.getElementById("contact");
+                // information = document.getElementById("show_introdcuebuy");
+                // buycar = document.getElementById("show_share");
+                share0 = document.getElementById("show_outfit");
+                share1 = document.getElementById("tube0");
+                share2 = document.getElementById("tube1");
+                share3 = document.getElementById("light0");
+                share4 = document.getElementById("light1");
+                share5 = document.getElementById("transmission");
+                share6 = document.getElementById("cylinder");
+                share7 = document.getElementById("absorber");
+                share8 = document.getElementById("caliper");
+                show = document.getElementById("show_introduce");
+                show50 = document.getElementById("fifty");
+                show100 = document.getElementById("hundred");
+                show125 = document.getElementById("hundredtwelev");
+                show150 = document.getElementById("hundredfifty");
+                clear();clear2();
+                // clear3();clear4();
+                var contactbutton = document.getElementById("contactclick");
+                // var buyc = document.getElementById("buyyy");
+                // var infor = document.getElementById("inforrr");
+                contactbutton.addEventListener("click",contactdisplay,false);
+                // buyc.addEventListener("click",buy,false);
+                // infor.addEventListener("click",inform,false);
+                var fifty = document.getElementById("50click");
+                var hundred = document.getElementById("100click");
+                var hundredtwelev = document.getElementById("125click");
+                var hundredfifty = document.getElementById("150click");
+                retrofit0=document.getElementById("item0");
+                retrofit1=document.getElementById("item1");
+                retrofit2=document.getElementById("item2");
+                retrofit3=document.getElementById("item3");
+                retrofit4=document.getElementById("item4");
+                retrofit5=document.getElementById("item5");
+                retrofit6=document.getElementById("item6");
+                retrofit7=document.getElementById("item7");
+                retrofit0.addEventListener("click",re0,false);
+                retrofit1.addEventListener("click",re1,false);
+                retrofit2.addEventListener("click",re2,false);
+                retrofit3.addEventListener("click",re3,false);
+                retrofit4.addEventListener("click",re4,false);
+                retrofit5.addEventListener("click",re5,false);
+                retrofit6.addEventListener("click",re6,false);
+                retrofit7.addEventListener("click",re7,false);
+                hundred.addEventListener("click",hund,false);
+                hundredtwelev.addEventListener("click",hundtwe,false);
+                hundredfifty.addEventListener("click",hundfif,false);
+                fifty.addEventListener("click",fif,false);  
+                $(function() {
+                    $('a[href*="#"]:not([href="#"])').click(function() {
+                    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                        var target = $(this.hash);
+                        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                        if (target.length) {
+                        // console.log(target.offset().top);
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, "slow");
+                        return false;
+                        }
+                    }
+                    });
+                });
+                $(function() {
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 1)  {          /* 要滑動到選單的距離 */
+                    $('.drop-down-menu').addClass('navFixed');   /* 幫選單加上固定效果 */
+                    } else {
+                    $('.drop-down-menu').removeClass('navFixed'); /* 移除選單固定效果 */
+                    }
+                });
+                });
+            }
+            function contactdisplay(){
+                contactshow = document.getElementById("contact");
+                contactshow.style.display="block";
+            }
+            // function buy(){
+            //     clear3();
+            //     buycar = document.getElementById("show_introducebuy");
+            //     buycar.style.display = "block";
+            // }
+            // function inform(){
+            //     clear4();
+            //     information = document.getElementById("show_share");
+            //     information.style.display = "block";
+            // }
+            function re0(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share1.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re1(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share2.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re2(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share3.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re3(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share4.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re4(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share5.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re5(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share6.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re6(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share7.style.display = "block";
+                share0.style.display = "block";
+            }
+            function re7(){
+                clear2();
+                share0 = document.getElementById("show_outfit");
+                share8.style.display = "block";
+                share0.style.display = "block";
+            }
+            function fif(){
+                clear();
+                show = document.getElementById("show_introduce");
+                show50.style.display = "block";
+                show.style.display = "block";
+            }
+            function hund(){
+                clear();
+                show = document.getElementById("show_introduce");
+                show100.style.display = "block";
+                show.style.display = "block";
+            }
+            function hundtwe(){
+                clear();
+                show = document.getElementById("show_introduce");
+                show125.style.display = "block";
+                show.style.display = "block";
+            }
+            function hundfif(){
+                clear();
+                show = document.getElementById("show_introduce");
+                show150.style.display = "block";
+                show.style.display = "block";
+            }
+            function clear(){
+                
+                show125.style.display = "none";
+                show150.style.display = "none";
+                show100.style.display = "none";
+                show50.style.display = "none";
+                show.style.display = "none";
+            }
+            function clear2(){
+                share0.style.display="none";
+                share1.style.display="none";
+                share2.style.display="none";
+                share3.style.display="none";
+                share4.style.display="none";
+                share5.style.display="none";
+                share6.style.display="none";
+                share7.style.display="none";
+                share8.style.display="none";
+            }
+            // function clear3() {
+            //     buycar.style.display="none";
+            // }
+            // function clear4() {
+            //     information.style.display = "none";
+            // }
+            window.addEventListener("load",start,false);
+        </script>
+        <style>
+            body {
+                background: black;
+            }
+            .loading {
+                position:fixed;
+                width: 100%;
+                height: 100%;
+                background-color: black;
+                z-index: 1100;
+            }
+            #load {
+    position:absolute;
+    width:600px;
+    height:36px;
+    left:50%;
+    top:40%;
+    margin-left:-300px;
+    overflow:visible;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor:default;
+    }
+
+    #load div {
+    position:absolute;
+    width:20px;
+    height:36px;
+    opacity:0;
+    font-family:Helvetica, Arial, sans-serif;
+    animation:move 2s linear infinite;
+    -o-animation:move 2s linear infinite;
+    -moz-animation:move 2s linear infinite;
+    -webkit-animation:move 2s linear infinite;
+    transform:rotate(180deg);
+    -o-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -webkit-transform:rotate(180deg);
+    color:#35C4F0;
+    }
+
+    #load div:nth-child(2) {
+    animation-delay:0.2s;
+    -o-animation-delay:0.2s;
+    -moz-animation-delay:0.2s;
+    -webkit-animation-delay:0.2s;
+    }
+    #load div:nth-child(3) {
+    animation-delay:0.4s;
+    -o-animation-delay:0.4s;
+    -webkit-animation-delay:0.4s;
+    -webkit-animation-delay:0.4s;
+    }
+    #load div:nth-child(4) {
+    animation-delay:0.6s;
+    -o-animation-delay:0.6s;
+    -moz-animation-delay:0.6s;
+    -webkit-animation-delay:0.6s;
+    }
+    #load div:nth-child(5) {
+    animation-delay:0.8s;
+    -o-animation-delay:0.8s;
+    -moz-animation-delay:0.8s;
+    -webkit-animation-delay:0.8s;
+    }
+    #load div:nth-child(6) {
+    animation-delay:1s;
+    -o-animation-delay:1s;
+    -moz-animation-delay:1s;
+    -webkit-animation-delay:1s;
+    }
+    #load div:nth-child(7) {
+    animation-delay:1.2s;
+    -o-animation-delay:1.2s;
+    -moz-animation-delay:1.2s;
+    -webkit-animation-delay:1.2s;
+    }
+
+    @keyframes move {
+    0% {
+        left:0;
+        opacity:0;
+    }
+        35% {
+            left: 41%; 
+            -moz-transform:rotate(0deg);
+            -webkit-transform:rotate(0deg);
+            -o-transform:rotate(0deg);
+            transform:rotate(0deg);
+            opacity:1;
+        }
+        65% {
+            left:59%; 
+            -moz-transform:rotate(0deg); 
+            -webkit-transform:rotate(0deg); 
+            -o-transform:rotate(0deg);
+            transform:rotate(0deg); 
+            opacity:1;
+        }
+        100% {
+            left:100%; 
+            -moz-transform:rotate(-180deg); 
+            -webkit-transform:rotate(-180deg); 
+            -o-transform:rotate(-180deg); 
+            transform:rotate(-180deg);
+            opacity:0;
+        }
+    }
+
+    @-moz-keyframes move {
+        0% {
+            left:0; 
+            opacity:0;
+        }
+        35% {
+            left:41%; 
+            -moz-transform:rotate(0deg); 
+            transform:rotate(0deg);
+            opacity:1;
+        }
+        65% {
+            left:59%; 
+            -moz-transform:rotate(0deg); 
+            transform:rotate(0deg);
+            opacity:1;
+        }
+        100% {
+            left:100%; 
+            -moz-transform:rotate(-180deg); 
+            transform:rotate(-180deg);
+            opacity:0;
+        }
+    }
+            /* #fifty {
+                color: red;
+            } */
+            /* #show_gogoro {
+                display: none;
+            } */
+                /* #show_introdcuebuy {
+                    display: none;
+                } */
+            #show_outfit {
+                display: none;
+            }
+            /* #show_introducebuy {
+                display: none;
+            } */
+            /* #show_share {
+                display: none;
+            } */
+            ul {
+            /* 取消ul預設的內縮及樣式 */
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            }
+            ul.drop-down-menu {
+            border: #ccc 1px solid;
+            display: inline-block;
+            font-family: 'Open Sans', Arial, sans-serif;
+            font-size: 13px;
+            }
+
+            ul.drop-down-menu li {
+            position: relative;
+            white-space: nowrap;
+            border-right: #ccc 1px solid;
+            }
+
+            ul.drop-down-menu>li:last-child {
+            border-right: none;
+            }
+
+            ul.drop-down-menu>li {
+            float: left;
+            /* 只有第一層是靠左對齊*/
+            }
+
+            ul.drop-down-menu a {
+            background-color: rgb(84, 179, 235);
+            color: #333;
+            display: block;
+            padding: 0 30px;
+            text-decoration: none;
+            line-height: 40px;
+            }
+
+            ul.drop-down-menu a:hover {
+            /* 滑鼠滑入按鈕變色*/
+            background-color: #ef5c28;
+            color: #fff;
+            }
+
+            ul.drop-down-menu li:hover>a {
+            /* 滑鼠移入次選單上層按鈕保持變色*/
+            background-color: #ef5c28;
+            color: #fff;
+            }
+
+            ul.drop-down-menu ul {
+            border: #ccc 1px solid;
+            position: absolute;
+            z-index: 99;
+            left: -1px;
+            top: 100%;
+            min-width: 180px;
+            }
+
+            ul.drop-down-menu ul li {
+            border-bottom: #ccc 1px solid;
+            }
+
+            ul.drop-down-menu ul li:last-child {
+            border-bottom: none;
+            }
+
+            ul.drop-down-menu ul ul {
+            /*第三層以後的選單出現位置與第二層不同*/
+            z-index: 999;
+            top: 10px;
+            left: 90%;
+            }
+
+            ul.drop-down-menu ul {
+            /*隱藏次選單*/
+            display: none;
+            }
+
+            ul.drop-down-menu li:hover>ul {
+            /* 滑鼠滑入展開次選單*/
+            display: block;
+            }
+            div.contact {
+                float: right;
+                color: white;
+                width: 50%;
+                border: 1px solid white;
+            }
+            h2 {
+                display:inline;
+                font-size: 1.5em;
+                margin-top: 0.83em;
+                margin-bottom: 0.83em;
+                margin-left: 0;
+                margin-right: 0;
+                font-weight: bold;
+            }
+            #contact {
+                display: none;
+            }
+@import "//codepen.io/jatinn_r/pen/OJPLZLX.css";
+.social-btns .btn,
+.social-btns .btn:before,
+.social-btns .btn .fa {
+  transition: all 0.35s;
+  transition-timing-function: cubic-bezier(0.31, -0.105, 0.43, 1.59);
+}
+.social-btns .btn:before {
+  top: 90%;
+  left: -110%;
+}
+.social-btns .btn .fa {
+  -webkit-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.social-btns .btn.facebook:before {
+  background-color: #3b5998;
+}
+.social-btns .btn.facebook .fa {
+  color: #3b5998;
+}
+.social-btns .btn.twitter:before {
+  background-color: #00aff0;
+}
+.social-btns .btn.twitter .fa {
+  color: #00aff0;
+}
+.social-btns .btn.google:before {
+  background-color: #dc4a38;
+}
+.social-btns .btn.google .fa {
+  color: #dc4a38;
+}
+.social-btns .btn.instagram:before {
+  background-color: #bf00ff;
+}
+.social-btns .btn.instagram .fa {
+  color: #bf00ff;
+}
+.social-btns .btn.pinterest:before {
+  background-color: #cc0000;
+}
+.social-btns .btn.pinterest .fa {
+  color: #cc0000;
+}
+.social-btns .btn:focus:before,
+.social-btns .btn:hover:before {
+  top: -10%;
+  left: -10%;
+}
+.social-btns .btn:focus .fa,
+.social-btns .btn:hover .fa {
+  color: #fff;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.social-btns {
+    height: 90px;
+  margin: auto;
+  font-size: 0;
+  text-align: center;
+  /* position: absolute; */
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.social-btns .btn {
+  display: inline-block;
+  background-color: #fff;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  margin: 0 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 28%;
+  box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.1);
+  opacity: 0.99;
+}
+.social-btns .btn:before {
+  content: "";
+  width: 120%;
+  height: 120%;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.social-btns .btn .fa {
+  font-size: 38px;
+  vertical-align: middle;
+}
+        </style>
+    </head>
+    <body>
+        <div class="loading">
+            <div class="load" id="load" >
+                    <div>G</div>
+                    <div>N</div>
+                    <div>I</div>
+                    <div>D</div>
+                    <div>A</div>
+                    <div>O</div>
+                    <div>L</div>
+                    </div>
+        </div>
+        <header>    
+            <ul class="drop-down-menu">
+                        <li>
+                            <a href="#">車種介紹</a>
+                            <ul>
+                                <li>
+                                    <a href="#show_introduce" id="50click">50cc</a>
+                                </li>
+                                <li>
+                                    <a href="#show_introduce" id="100click">100-124cc</a>
+                                </li>
+                                <li>
+                                    <a href="#show_introduce" id="125click">125cc</a>
+                                </li>
+                                <li>
+                                    <a href="#show_introduce" id="150click">150cc up</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#show_gogoro">gogoro</a></li>
+                            <li>
+                                <a href="#">改裝項目</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">排氣管</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#show_outfit" id="item0">直通</a>
+                                            </li>
+                                            <li>
+                                               <a href="#show_outfit" id="item1">回壓</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">燈系</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#show_outfit" id="item2">LED</a>
+                                            </li>
+                                            <li>
+                                                <a href="#show_outfit" id="item3">HID</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">內部構造</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#show_outfit" id="item4">傳動</a>
+                                            </li>
+                                            <li>
+                                                <a href="#show_outfit" id="item5">缸</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">安全系統</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="#show_outfit" id="item6">避震器</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#show_outfit" id="item7">煞車系統</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#show_introdcuebuy" >專案介紹</a>
+                            </li>
+                            <li>
+                                <a href="#show_share" >資訊分享</a>
+                            </li>
+                            <li>
+                                <a href="#contact" id="contactclick">聯絡方式</a>
+                            </li>
+                        </ul>
+                        <a href="project.pptx" download>期末專案PPT</a>
+                    </header>
+                        <div id="show_introduce">
+                               
+                                <div id="fifty">
+                                    <div id="textfif">
+                                        <span>四行程50cc的馬力太弱了，沒什麼氣力
+                                        同樣的cc數，四行比二行環保但因為構造問題，表現出來的馬力比較差(二行程的馬力約是四行程的1.3～1.8倍)
+                                        如果以S牌風50(四行程)來看，最大馬力僅3.8ps
+                                        但如果是Dio50(二行程)的話，最大馬力為7.0ps
+                                        換個角度想：如果要維持住同等級的馬力，四行程得買100cc才能跟二行程的50cc相當
+                                        在當今的環保趨勢與法規之下，100cc慢慢變成110跟115cc
+                                        因為要求的越來越嚴，壓縮比已經拉到頂，所以只能提昇cc數來換取馬力
+                                        老實講四行程50cc，除了比較環保之外，價錢跟動力沒有比較好，市場接受度也不高
+                                        車商當然少做甚至不想做
+                                        中農機 NSU50/民國57年 二次大戰機車風貌
+                                        別說你沒聽過這個廠牌，就連我也只看過生鏽報廢的實車，對這廠牌還真沒有任何印象，不過那時代的車多半是零件進口然後在台組立。
+                                        然而比較特別的是此車 只有50cc，當時主打女生用款，因此以輕巧的50cc車型，讓婦女同胞可以輕易的牽車與騎乘。
+                                        在當時有個不盡常理的規定，就是50cc不得雙載的規定， 當時的官部門認為50cc不過是加了馬達的腳踏車，雙載有影響行車安全之虞。
+                                        跟現今強調50cc也能雙載，讓小情侶跑天下的情況截然不同。
+                                        中農機代理生產的NSU機車主打女用車，如今看來外型實在不討喜，單用小引擎來訴求女性市場。</span>
+                                    </div>
+                                    
+                                    <div id="pic">
+                                            <img class="onepic" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t31.0-8/s720x720/664564_4000698771932_1135898426_o.jpg?_nc_cat=105&_nc_ohc=3qfb8kyjAYwAQkCiTjhg6pkZw4DNnoho_ex7oRbcXZJxE1GYDY4V4vGBQ&_nc_ht=scontent-sjc3-1.xx&oh=50c3366ea6229200bfac59ddcb224d59&oe=5E6B6C16" width="350px" height="400px">    
+                                    </div>
+                            </div>
+                            <div id="hundred">
+                                <span>
+                                    排氣量在100c.c～124c.c 區間的車款有：山葉CUXI 115 碟煞版、山葉Limi 115、三陽Mio 115、三陽WOO、光陽New Many 110，
+                                    其中山葉CUXI 115 碟煞版以及光陽New Many 110都相當的具有討論度。
+                                    此一級距的車款大多吸引女性消費者，因此其特性為車重不重、顏色鮮豔以及具有夠用的置物箱，因排氣量較小，車價也跟著較低，更有甚者，其在都市裡移動擁有大車所沒有的優勢，
+                                    因為車身較小因此能停放在較小的空間，在忙碌的都市裡實為一大競爭力。
+                                </span>
+                                    <div id="table100">
+                                        <table>
+                                            <caption>排氣量100c.c~124c.c 機車推薦</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            車款
+                                                        </th>
+                                                        <th>
+                                                            價格
+                                                        </th>
+                                                        <th>
+                                                            排氣量
+                                                        </th>
+                                                        <th>
+                                                            前/後煞車
+                                                        </th>
+                                                        <th>
+                                                            後避震器
+                                                        </th>
+                                                        <th>
+                                                            排放法規
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                        <tr>
+                                                            <td>
+                                                                YAMAHA山葉機車 CUXI 115 碟煞
+                                                            </td>
+                                                            <td>
+                                                                68800
+                                                            </td>
+                                                            <td>
+                                                                113c.c
+                                                            </td>
+                                                            <td>
+                                                                碟/鼓煞
+                                                            </td>
+                                                            <td>
+                                                                後單避震器
+                                                            </td>
+                                                            <td>
+                                                                六期
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                YAMAHA山葉機車 Limi 115
+                                                            </td>
+                                                            <td>
+                                                                69800
+                                                            </td>
+                                                            <td>
+                                                                113c.c
+                                                            </td>
+                                                            <td>
+                                                                碟/鼓煞
+                                                            </td>
+                                                            <td>
+                                                                後單避震器
+                                                            </td>
+                                                            <td>
+                                                                六期
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                SYM三陽機車 Mio 115
+                                                            </td>
+                                                            <td>
+                                                                65000
+                                                            </td>
+                                                            <td>
+                                                                115.6c.c
+                                                            </td>
+                                                            <td>
+                                                                碟/鼓煞
+                                                            </td>
+                                                            <td>
+                                                                後單避震器
+                                                            </td>
+                                                            <td>
+                                                                六期
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                SYM三陽機車 WOO
+                                                            </td>
+                                                            <td>
+                                                                52000
+                                                            </td>
+                                                            <td>
+                                                                101c.c
+                                                            </td>
+                                                            <td>
+                                                                鼓/鼓煞
+                                                            </td>
+                                                            <td>
+                                                                後單避震器
+                                                            </td>
+                                                            <td>
+                                                                六期
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                KYMCO 光陽機車New Many 110
+                                                            </td>
+                                                            <td>
+                                                                68800
+                                                            </td>
+                                                            <td>
+                                                                111.7c.c
+                                                            </td>
+                                                            <td>
+                                                                鼓/鼓煞
+                                                            </td>
+                                                            <td>
+                                                                後單避震器
+                                                            </td>
+                                                            <td>
+                                                                六期
+                                                            </td>
+                                                        </tr>
+                                                </tbody>
+                                    </table>
+                                </div>
+                                <p>目前台灣三大主力機車品牌為YAMAHA山葉機車、SYM三陽機車以及KYMCO 光陽機車，因應消費者各種客群的需求，
+                                    開發出不同的排氣量、煞車系統以及避震系統作配搭。</p>
+                            </div>
+                                <div id="hundredtwelev">
+                                    排氣量在125c.c ~ 149c.c 區間的車款有：山葉CygnusX 125 ABS、山葉BWS R 125、三陽FNX 125、三陽JET 125、光陽Racing S 125、光陽GP 125，
+                                    其中山葉CygnusX 125 ABS以及光陽Racing S 125在街頭往往成為競爭者。
+                                    <div id="table125">
+                                        <table>
+                                            <caption>排氣量125c.c~150c.c 機車推薦</caption>
+                                            <thead>
+                                                <tr>
+                                                    <th>
+                                                        車款
+                                                    </th>
+                                                    <th>
+                                                        價格
+                                                    </th>
+                                                    <th>
+                                                        排氣量
+                                                    </th>
+                                                    <th>
+                                                        前/後煞車
+                                                    </th>
+                                                    <th>
+                                                        後避震器
+                                                    </th>
+                                                    <th>
+                                                        排放法規
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        YAMAHA山葉機車 CygnusX 125 ABS
+                                                    </td>
+                                                    <td>
+                                                        82,800
+                                                    </td>
+                                                    <td>
+                                                        124c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/碟剎+ABS碟/鼓煞
+                                                    </td>
+                                                    <td>
+                                                        後雙避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        YAMAHA山葉機車 BWS R 125
+                                                    </td>
+                                                    <td>
+                                                        79,800
+                                                    </td>
+                                                    <td>
+                                                        124c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/碟剎
+                                                    </td>
+                                                    <td>
+                                                        後雙避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        SYM三陽機車 FNX 125
+                                                    </td>
+                                                    <td>
+                                                        86,000
+                                                    </td>
+                                                    <td>
+                                                        124.9c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/碟剎
+                                                    </td>
+                                                    <td>
+                                                        後雙避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        SYM三陽機車 JET 125 
+                                                    </td>
+                                                    <td>
+                                                        83,500
+                                                    </td>
+                                                    <td>
+                                                        124.6c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/碟剎
+                                                    </td>
+                                                    <td>
+                                                        後雙避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        KYMCO 光陽機車Racing S 125
+                                                    </td>
+                                                    <td>
+                                                        86,400	
+                                                    </td>
+                                                    <td>
+                                                        124.8c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/碟剎
+                                                    </td>
+                                                    <td>
+                                                        後雙避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        KYMCO 光陽機車GP 125
+                                                    </td>
+                                                    <td>
+                                                        58,600	
+                                                    </td>
+                                                    <td>
+                                                        124.6c.c
+                                                    </td>
+                                                    <td>
+                                                        碟/鼓剎
+                                                    </td>
+                                                    <td>
+                                                        後單避震器
+                                                    </td>
+                                                    <td>
+                                                        六期
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <p>山葉CygnusX 125 ABS俗稱「大鵝」，以高性價比以及大置物箱容量聞名，BWS R 125則是以其具侵略性的外觀被稱為「把妹神車」。
+                                            以近年來在賽道上的性能表現來說，三陽的FNX 125、JET 125皆有不錯的表現，光陽Racing S 125以國內車廠來說工藝已相當成熟，
+                                            且其有零件相對便宜的優勢，而GP125則是平常耳熟能詳的都市型車款，相當實用且CP值高。</p>
+                                </div>    
+                                    <div id="hundredfifty">
+                                        排氣量在150c.c 以上的車款有：山葉SMAX 155 ABS、山葉B FORCE 155運動版、
+                                        三陽6代 Fighter、光陽Racing S 150 ABS、光陽G6 150 ABS。
+                                        <div id="table150">
+                                            <table>
+                                                <caption>排氣量150c.c以上 機車推薦</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>
+                                                            車款
+                                                        </th>
+                                                        <th>
+                                                            價格
+                                                        </th>
+                                                        <th>
+                                                            排氣量
+                                                        </th>
+                                                        <th>
+                                                            前/後煞車
+                                                        </th>
+                                                        <th>
+                                                            後避震器
+                                                        </th>
+                                                        <th>
+                                                            排放法規
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            YAMAHA山葉機車SMAX 155 ABS
+                                                        </td>
+                                                        <td>
+                                                            105,600	
+                                                        </td>
+                                                        <td>
+                                                            155c.c
+                                                        </td>
+                                                        <td>
+                                                            碟/碟剎+ABS
+                                                        </td>
+                                                        <td>
+                                                            中置避震器
+                                                        </td>
+                                                        <td>
+                                                            六期
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            YAMAHA山葉機車FORCE 155
+                                                        </td>
+                                                        <td>
+                                                            87,800	
+                                                        </td>
+                                                        <td>
+                                                            155c.c
+                                                        </td>
+                                                        <td>
+                                                            碟/碟剎
+                                                        </td>
+                                                        <td>
+                                                            中置避震器
+                                                        </td>
+                                                        <td>
+                                                            六期
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            SYM三陽機車6代 Fighter 
+                                                        </td>
+                                                        <td>
+                                                            87,500	
+                                                        </td>
+                                                        <td>
+                                                            150.4c.c
+                                                        </td>
+                                                        <td>
+                                                            碟/碟剎
+                                                        </td>
+                                                        <td>
+                                                            後雙避震器
+                                                        </td>
+                                                        <td>
+                                                            六期
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            KYMCO 光陽機車Racing S 150 ABS
+                                                        </td>
+                                                        <td>
+                                                            98,300	
+                                                        </td>
+                                                        <td>
+                                                            149c.c
+                                                        </td>
+                                                        <td>
+                                                            碟/碟剎+ABS
+                                                        </td>
+                                                        <td>
+                                                            後雙避震器
+                                                        </td>
+                                                        <td>
+                                                            六期
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>
+                                                            KYMCO 光陽機車G6 150 ABS
+                                                        </td>
+                                                        <td>
+                                                            100,100	
+                                                        </td>
+                                                        <td>
+                                                            149c.c
+                                                        </td>
+                                                        <td>
+                                                            碟/碟剎+ABS
+                                                        </td>
+                                                        <td>
+                                                            後雙避震器
+                                                        </td>
+                                                        <td>
+                                                            六期
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                            <p>在這個級距的車款，相當在意動力以及制動性能，因為車重較重，
+                                            省油效能必然較低，然而因為大排氣量的引擎，能夠擁有傑出的加速度表現，相對的在制動性能上也必須跟著進化，
+                                            因此漸漸發展出前後雙碟剎的規格，甚至有些車款也已經搭載ABS防鎖死系統，讓消費者在享受高速奔馳快感時也能擁有高性能的安全保護。</p>
+                                            <p>值得一提的是，在山葉的兩個車款中，都搭載中置後避震器，中置避震器的特性在於能夠以更短的行程來創造出更多的輪胎上下位移，
+                                            也就是說在同一種阻尼下能夠擁有更大的敏感度，其可貴之處就是重新的設計了車架與輪胎之間的關係，以做到更好的吸震效果。</p>
+                                    </div>
+                        </div>
+                        <div id="show_gogoro">
+                            <div id="summary">
+                                <p><a href="#howmuch">Gogoro多少錢？</a></p>
+                                <p><a href="#discount">Gogoro資費方案</a></p>
+                                <p><a href="#whybuy">為什麼要買Gogoro？</a></p>
+                                <p><a href="#disturb">騎了Gogoro後遇到的困擾？</a></p>
+                                <p><a href="#dontbuy">解析不要買Gogoro理由的懶人包</a></p>
+                            </div>
+                            <hr>
+                            <div id="howmuch">
+                                <h2 style="color: sandybrown;">Gogoro多少錢？</h2>
+                                <p>Gogoro多少錢是個很難用一句話回答的問題，因為它有分車款，還要把政府補助金額算進來，以及推人入坑的配件，
+                                    如果硬要講的話，準備6萬多至7萬就可以把車牽回家！本段落會分為車體與配件兩個部分來跟大家說明。</p><br><br><br><br><br><br>
+                                <hr>
+                                    <strong>車體篇</strong><br>
+                                <p>官方宣傳的文案是63000元起，而這個是買最低階的Lite版加上桃園市的補助(25000元)才有的價格，
+                                    網路上的範例是新北市(補助24000元)，然後買了Lite版，補助後是64000元，再加上，領牌費2050元，買這台車總共花了66050元。</p> 
+                                <p>※各縣市政府補助費用不一樣，詳情請看<a href="http://www.gogoro.com/tw/faq/?hash=Government" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">政府補助方案</a>。</p>   
+                                <p>如果你的信用卡有回饋金，像是元大鑽金卡國內消費回饋1.2%，那總價就會再低一些了，也有人用花旗分12期回饋1500元，
+                                    我個人因為工作的關係常出國，所以是刷紅利累積可以轉換里程的信用卡。
+                                        ※學生購車就送購車金3000元，詳情請洽Gogoro客服或門市。</p>
+                                        <hr>
+                            <p><strong style="color:#fff; float: left;">Gogoro各款價格</strong><br>
+                                Gogoro S：123000(原價)-29000(最高政府補助)=98000<br>
+                                Gogoro2 Plus：79800(原價)-29000(最高政府補助)=50800<br>
+                                Gogoro2：73800(原價)-29000(最高政府補助)=44800<br>
+                                Gogoro Plus：108000(原價)-29000(最高政府補助)=79000<br>
+                                Gogoro：98000(原價)-29000(最高政府補助)=69000<br>
+                                <del>Gogoro Lite：88000(原價)-29000(最高政府補助)=63000</del>&nbsp;<span style="color: #ff0000;">※Lite款已停產</span><br>
+                                ※車款的差別請看<a href="https://www.gogoro.com/tw/smartscooter/specs/" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">規格比較表</a></p>
+                                <hr>
+                                <strong>配件篇</strong><br>
+                            <p>配件並不是必要，不買也可以騎，也不會有什麼問題，但現在比較聰明的企業就是這樣，賺錢都不會只靠主要產品在賺，反而周邊的利潤是更高的！
+                                特別是看起來越有質感的東西越貴，消費者知道企業想騙自己的錢，但最後還是甘願被騙，掉進裡見不到底的坑啊！以下我就針對幾項我個人認為比較值得購買的配件來跟大家分享：</p>
+                            <p>查看<a href="https://store.gogoro.com/tw/store/product-list/accessory" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">官網的配件照片與介紹</a></p>
+                            <p>1.車墊：買車的時候並沒有附贈車墊，而是需要另外加購，不買也可以騎，只是心裡會少了一種踏實感，有990元得防滑貼，也有3490很有質感得鋁合金踏墊，我個人是買了防滑踏墊-同心圓款(1490元)。</p>
+                            <p>2.加長坐靠：如果常需要雙載的話，可以買個加長坐靠(1890元)。但如果兩個人的身材都屬於比較碩大、寬胖的話，就不用考慮這個加長坐靠了，因為我也不建議你買Gogoro。據說這個缺貨缺很大！我個人是排了2個月才買到，請門市安裝的話要另外收工錢，我記得一百多而已。</p>
+                            <p>3.置物架：有分I型(1490元)跟Y型(1990元)的置物架，可以加購掛勾(390)裝在置物架上，但我個人覺得不太需要多花這個錢，因為Gogoro本身就有一個掛勾，我沒有要掛飲料杯架，也沒有要拿Gogoro來當貨車，所以有那個就夠了。</p>
+                            <p>其他像是後擋泥板(249元)、前置物架(3490元)、燻黑造型風鏡(1590元)等等配件，我個人目前覺得都不太需要。</p>
+                            <p><img class="alignnone size-full wp-image-7508" src="https://img.hiromishi.com/20160923163105_65.jpg" alt="gogoro-電動車-懶人包-攻略-配件-推薦-價格-價錢-多少錢-換車-機車-困擾-優惠-月租-方案-速度-安全-環保" width="700" height="467" scale="0"></p>
+                            </div>
+                            <hr>
+                            <div id="discount">
+                                <h2>Gogoro資費方案</h2>
+                                <p>[保養免費]<br>
+                                    <strong>暢遊方案299/月</strong>：每月可騎乘 100 公里，超過以每公里 2.5 元計費，享免費保養服務、無限次數電池交換及電池豁免。<br>
+                                    <strong>暢遊方案499/月</strong>：每月可騎乘 200 公里，超過以每公里 2.0 元計費，享免費保養服務、無限次數電池交換及電池豁免。<br>
+                                    <strong>暢遊方案799/月</strong>：每月可騎乘 600 公里，超過以每公里 1.5 元計費，享免費保養服務、無限次數電池交換及電池豁免。</p>
+                                <p>[保養自費]<br>
+                                    <strong>自在方案399/月</strong>：每月可騎乘 150 公里，超過以每公里 1 元計費，享無限次數電池交換及電池豁免，回廠保養則需自費。<br>
+                                    <strong>自在方案599/月</strong>：加贈200公里，每月可騎乘 400 公里，超過以每公里 1 元計費，享無限次數電池交換及電池豁免，回廠保養則需自費 9/30前新購車，可享連續 6 個月每月加贈200公里。</p>
+                                
+                            </div>
+                            <hr>
+                            <div id="whybuy">
+                                <h2>為什麼要買Gogoro？</h2>
+                                <p>每個人要花比較多錢買東西的時候，都會編出幾個理由說服自己，讓自己花這些錢沒有罪惡感，這些理由不一定有道理，也不一定正確，但只要能把這些理由列出來，心裡加減會踏實一些，以下就來跟大家分享我的理由：</p>
+                                <span><p>1.外型很潮：雖然這是一件很主觀的事情，不過我當初會開始注意Gogoro也是因為它的外型而展開爬文之旅。</p>
+                                <p>2.內在很潮：用手機就能發動車子，炫斃了！不過我主要都還是用原廠附送的遙控鑰匙啟動車子就是了。騎乘資料數據化，可以了解自己的騎車狀況，因應不同狀況調整適合自己的月租方案，不過這個功能對我們使用者來說，很酷的成分佔比較大，實際效用並不大。主要還是對Gogoro業者在未來的開發產品及相關應用上會更有實際的幫助，也就是如何賺到更多錢，讓我們這些消費者入坑。</p>
+                                <p>3.想淘汰一修再修的老油車：人生第一台油車騎了十幾年，左修右修還是問題一堆，萌生了不如換一台新車的想法，但現在的機車都是噴射引擎，價格動輒六、七萬以上，不像我的第一台機車只花了四萬出頭，而Gogoro在政府補助加上推出Lite版之後，也才六萬多，那不如政府補助還有這麼多的時候趕快來換這台電動車。</p>
+                                <p>4.想找一台代步車：只要出遠門或去超過車程20分鐘以上的地方，我都會開車，對我來說，機車或者說Gogoro就只是到附近買菜、吃飯或捷運站載家人的代步工具。如果Gogoro騎乘里程太長，月租費也會比較貴，而我每個月大概只騎100多公里，只要選擇月租299或399元的就夠。※如果機車是你主要的通勤工具，而且你公司、學校比較遠的話，我認真不建議換Gogoro，除非你不在意Gogoro的CP值是不是比油車高。</p>
+                                <p>5.騎乘時，起步加速很快，聲音很小、慢速時不會抖動，所以騎起來很輕鬆。</p>
+                                <p style="text-align: center;"><img class="alignnone size-full wp-image-7509" src="https://img.hiromishi.com/20160923163208_78.jpg" alt="gogoro-電動車-懶人包-攻略-配件-推薦-價格-價錢-多少錢-換車-機車-困擾-優惠-月租-方案-速度-安全-環保" width="700" height="467" scale="0"></p></span>
+                            </div>
+                            <hr>
+                            <div id="disturb">
+                                    <h2>騎了Gogoro後遇到的困擾？</h2>
+                                    <p>1.外出停車要很小心翼翼，甚至不惜多花時間找遠一點、空位大一點的位子，很擔心被刮，但其實牽任何新車都會有這個問題，特別是左邊的後照鏡超容易被刮，因為停車的時候要向左傾才能鎖龍頭，如果不得已停在車子很多很擠的地方，我就會用雨衣把車身包起來，但後照鏡就比較能防了。</p>
+                                    <p>2.同前面提到的，因為停車的時候要向左傾才能鎖龍頭，每次下雨之後，儀表板左邊的方向燈都會積水。並不是每台車都這樣，後來我有向客服反映，已免費幫我換新儀表板的蓋子，不會積水了。</p>
+                                    <p>3.牽了Gogoro回家之後，騎2個禮拜就發生大燈、Smart等幾個按鍵失靈，後來牽回去修，發現是按鍵接觸不良，就免費更換及維修。</p>
+                                    <p>4.上一個段落的最後一段有提到「騎乘時，起步加速很快，聲音很小」，不過也正因為聲音很小，所以騎在路上要小心一點，行人很難注意到你，所以我後來就養成慢慢騎的好習慣，不過在一路綠燈的大馬路上我就會儘可能催到底XD。</p>
+                                    <p>5.常被路人請教Gogoro的問題，立馬化身Gogoro業務，比較誇張的人甚至想要跟我借騎，但我都會告訴他們可以去門市<a href="https://www.gogoro.com/tw/book-a-ride/" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">預約試騎</a>。</p>
+                                    <p>6.騎Gogoro的時候，車子常常被路人意淫，總之很容易成為路上的焦點，不能偷偷摳屁股或挖鼻屎。</p>
+                            </div>
+                            <div id="dontbuy">
+                                <h2>解析不要買Gogoro理由的懶人包</h2>
+                                <p><span style="color: #993300;"><strong>太貴</strong></span><br>
+                                    <span style="color: #993300;">就算加上所有補助、優惠方案、保費，前兩年要每月騎1000km才能與中高價125打平。兩年後的保養維修費還未知，但也差不多要每月騎1000km以上才能打平。 且這還沒有考慮想騎出市區玩時，要另外租車的費用。</span><br>
+                                    →Gogoro經過降價以及推出Lite版之後，最便宜一台只要63000元，其實跟油車是差不多的！不過保養維修費究竟會不會比油車高，這個都說不準！畢竟目前Gogoro還沒開始在路上跑超過三、五年，
+                                    很多數據還不夠推測未來會怎樣，的確這是Gogoro或是所有新產品的劣勢。不過說到底，電動車不能拿來跟油車比價，這是兩個不一樣的東西，通常會猶豫要不要Gogoro的人，八成是覺得它很新潮酷炫，而不是覺得他CP值高或性能像跑車，以汽車來比喻，你會拿得利卡跟福斯金龜車作比較嗎？如果知道這些你認為的缺點之後，
+                                    還是會猶豫要不要買Gogoro，那代表你真的是迷戀它的新潮酷炫，那接下來你要做的就是改變對Gogoro的心態，不要把它當一台油車看待，也不要把它當作出遠門的主要交通工具。</p>
+                                <p><span style="color: #993300;"><strong>性能不夠好</strong></span><br>
+                                    <span style="color: #993300;">宣傳時一直拿125作對手，但實際上只有初段加速性能可與125匹敵，極速只有100cc的等級，續行力更是連50cc都不如。</span><br>
+                                    →性能如果單指速度的話，起步加速是真的非常快！官方是說0~50Km/h加速只需要4.2 秒，騎車經驗是每次一綠燈，幾乎沒有車會在前面，這方面應該超越大部份125了。
+                                    極速的話，官方說最快可達95Km/h，我覺得已經夠快了！如果還嫌不夠快的話，是要拿Gogoro到公主道跟Sky葛格尬車嗎？但不管它可以騎多快，一般道路限速也不會讓你騎超過95Km/h啊！
+                                    雖然在市區幾乎都是40~50Km/h的速限，而大部份人(包括警察)平常騎車速度都超過60Km/h以上，但Gogoro的最快95Km/h已經綽綽有餘了！</p>
+                                <p>
+                                    <span style="color: #993300;"><strong>補助優惠有限</strong></span>
+                                    <span style="color: #993300;">官方拿來宣傳比較的是優惠價格，政府補助有限額，贈送月租優惠也只有個1月的時限，一旦少了補助和優惠，花費將爆增4萬元。</span>
+                                    <span>→政府補助原則上很難遇到名額不足，除非全台灣的人都瞬間一起買Gogoro，但這不可能發生啊！
+                                        不過的確宣傳文案寫63000起並非每個縣市都是這個價格，以台北市的政府補助額18000元與新北市的24000元做比較，就差了6000元，
+                                        所以身分證選對戶籍地真的很重要啊!花費暴增4萬元我不知道他怎麼算的？</span>
+                                </p>
+                                <p><span style="color: #993300;"><strong>座位、後扶手、置物空間偏小</strong></span><br>
+                                    <span style="color: #993300;">實際騎過的都知道，尤其是想雙載時，明顯小於官方常拿來比較的125cc。</span><br>
+                                    →如果常雙載，可以多花1890元買<a href="http://store.gogoro.com/tw/store/product/bb2afa5a-aa6e-4ff2-a244-42c08a65b757" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">加長座靠</a>
+                                    ，不過目前全台缺貨。置物空間的確偏小，但至少放得下1頂3/4安全帽+雨衣+手套+抹布，
+                                    網路上有人推薦買1490元的萬用收納袋(防潑水)，有了它就可以再多裝一頂安全帽掛在車上，想省錢可以另外去買<a href="http://mall.pchome.com.tw/prod/QCAA1C-A9006C1YA" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">POKE!安全帽防水防塵套</a>，只要1080元。</p>
+                                <p><span style="color: #993300;"><strong>換電池的不便</strong></span><br>
+                                    <span style="color: #993300;">換電站沒電池的機率比加油站沒油高，換兩顆9.8公斤的電池比加油費力。就算照預期建完雙北150站，密度還是不及加油站的一半，補充能源需要花較多的路程。雖然換電池動作快，但電車續行差，單位里程要換更多次，加上往返時間，其實更浪費時間。</span><br>
+                                    →換電站沒電池的機率超級低！我騎了好幾個月也都沒遇過，我們的騎乘資訊全部都會上傳至雲端，Gogoro可以利用這個大數據來分析並加以利用，會隨著換電需求提升而新增換電站的點與量。也可以透過手機看周邊的換電站剩幾顆電池，還能預約換電以防騎到那邊之後沒電池。
+                                    平均騎個80公里左右就要換一次電池，但只要你是住在市區或離市區不遠的地方，換電站都不會多遠，平常會換電的地方就是住家或公司附近，反正買車之前先查好這兩個地方或中間點有沒有換電站就好，不會花你多少時間。</p>
+                                <p><span style="color: #993300;"><strong>只能在服務區域使用</strong></span><br>
+                                    <span style="color: #993300;">無法自行充電，無法離開服務區。</span><br>
+                                    →有人幫你充好電，幹嘛要自己充？離開服務區的話，像是台中以南或東部，為何不搭高鐵或客運？你會想騎到那麼遠的地方旅遊嗎？如果要環島，你是每個月都在環島嗎？為什麼一定要騎Gogoro環島呢？</p>
+                                <p><span style="color: #993300;"><strong>充電站建設進度</strong></span><br>
+                                    <span style="color: #993300;">官方並沒有保證建設進度，萬一賣不好，可能連北市都建不足，而且永遠騎不出去。</span><br>
+                                    →結果意外賣得還不錯，特別是降價外加推出Lite版之後，賣得更好！不過換電站目前只有中部以北的地區才有，主要也都集中在直轄市的市區，所以住深山的人要再多考慮一下。<a href="https://www.gogoro.com/tw/gostation/" target="_blank" rel="noopener noreferrer nofollow" data-wpel-link="external">查詢Gogoro換電站的據點分佈</a></p>
+                                <p><strong><span style="color: #993300;">無服務年限保證</span></strong><br>
+                                    <span style="color: #993300;">一般油車可以騎10幾年，但Gogoro卻無法保證未來會不會一直服務換電，電池規格會不會更改。</span><br>
+                                    →現在談這個都天方夜譚，孫中山會因為無法保證未來革命會不會成功就不革命嗎？你會因為寶可夢熱潮無法保證能維持多久就不抓寶可夢嗎？</p>
+                                <p><strong><span style="color: #993300;">特規零件</span></strong><br>
+                                    <span style="color: #993300;">特規零件意味著維修被壟斷，公司很有可能會在未來的維修保養上狠噱一筆。這部分可以參考全身特規零件的手機維修費。全新設計的零件未經實際考驗，也會有未知的風險。</span><br>
+                                    →據目前開賣一年多的經驗來看，Gogoro很珍惜Gogoro使用者們的意見回饋，他們都會儘可能滿足消費者，像是賣不好馬上降價，大家抱怨雙載不方便就推出加長座靠。
+                                    網路上有人牽了Gogoro回家之後，騎2個禮拜就發生大燈、Smart等幾個按鍵失靈，後來牽回去修，發現是按鍵接觸不良，就免費更換及維修。我必須說Gogoro的不穩定與缺點是有的！
+                                    但他們還算是願意花時間跟金錢處理這些問題，當然也要看你自己願不願意花自己的時間與金錢去見證這項新科技的歷史。</p>
+                                <p><span style="color: #993300;"><strong>廣告不實嫌疑</strong></span><br>
+                                    <span style="color: #993300;">說899無限交換，卻在條款裡限制里程，有誤導消費者嫌疑。難道大家不騎車還會一直去換電池??應該寫每月899可行駛1600km。到處宣傳極速達95km/h，卻沒有標註要另外每月多付300元才有。官網賣車頁面也沒有標註極速有被閹割，規格表仍然直接寫95km/h，有誤導消費者嫌疑。</span><br>
+                                    →同意，不過幾乎全台灣或者全世界都一堆廠商玩這種文字遊戲的廣告宣傳，所以我很不喜歡這種廣告文案，但其實廣告普遍都有這種狀況，所以見怪不怪，一看到這種天底下掉下來的好康，我都會先懷疑再求證才決定要不要消費。
+                                    極速sport是每月加249元，不是300多元。</p>
+                                <p><strong><span style="color: #993300;">不一定能減碳</span></strong><br>
+                                    <span style="color: #993300;">台灣大部分電是靠火力發電，且電動車生產過程排碳高於油車，就算真能減到碳也很有限，願意花錢減碳還不如綠電認 購。</span><br>
+                                    →沒錯！電力系統以燃煤火力發電廠為主，也就是說電動車的動力來源，會是自汙染相對更高的燃煤火力發點廠而來，擴大使用電動車，相對也是加深對於燃煤火力電廠的依賴，更增加了對環境的傷害。
+                                    所以要節能減碳是全民一起從生活做起，Gogoro的確比較理想化，但至少他們有思考如何改變用電的方式。</p>
+                            </div>
+                        </div>
+                        <br>
+                        <div id="show_outfit">
+                            <div id="tube">
+                                <div id="tube0">
+                                    <h2 style="color: white;">直通管</h2>
+                                    <p>直通管內部沒有設置隔版等設施，僅在外面包覆消音棉阻隔部分噪音，廢氣在無阻擋的狀態下直接排出，劇烈膨脹下發出爆炸聲，便是俗稱噪音。
+                                    此外低轉速進排汽門重疊時間較長的關係，會讓燃燒室的混合氣流出，
+                                    直通管徑大又通的設計，低轉速時廢氣流速自然變慢，因此造成低速無力的情形。反觀高速狀態下，大量排出的廢氣不受到阻擋的關係，自然可以完全發揮出動力。</p>
+                                    <strong>優點</strong>
+                                    <p>排氣順暢發揮動力</p>
+                                    <strong>缺點</strong>
+                                    <p>低速較差且高噪音</p>
+                                    <p>改排氣管可以增加車子的性能，但並不是每部車改了排氣管都可以增加性能，也不是任何一種改裝排氣管都可以增加性能。
+                                        也就是說，適度的、正確的改裝排氣管才可以增加性能，我認為直通管是最好的設計，因為直通管可以做到最理想的回壓控制，由於直通管沒有隔版，排氣所受的干擾最小，
+                                        藉由管徑的粗細長短，就可以調配出最適當且穩定的回壓。這畢竟是理想，直通管的噪音實在太吵，根本過不了噪音檢測。
+                                        再說，若要將直通管做得夠安靜，便需要很長很長的消音段 ( 直通形式 ) ，這樣的直通管搞不好比一部車還要長，根本不切實際。</p>
+                                    <p>附上直通管的細說圖</p>
+                                    <img id="aimg_341179" aid="341179" src="https://forum.jorsindo.com/data/attachment/forum/forumid_11/20091118_7f8b2bed19530203a37fRKm77FY4ngea.jpg" zoomfile="data/attachment/forum/forumid_11/20091118_7f8b2bed19530203a37fRKm77FY4ngea.jpg" file="data/attachment/forum/forumid_11/20091118_7f8b2bed19530203a37fRKm77FY4ngea.jpg" thumbimg="1" alt="全直通管.jpg" title="全直通管.jpg" w="0" lazyloaded="true" _load="1" style="">
+                                    <img id="aimg_341180" aid="341180" src="https://forum.jorsindo.com/data/attachment/forum/forumid_11/20091118_79334bdce39dfe1d9c23e43z8cjdhWrF.jpg" zoomfile="data/attachment/forum/forumid_11/20091118_79334bdce39dfe1d9c23e43z8cjdhWrF.jpg" file="data/attachment/forum/forumid_11/20091118_79334bdce39dfe1d9c23e43z8cjdhWrF.jpg" thumbimg="1" alt="半直通管.jpg" title="半直通管.jpg" w="0" lazyloaded="true" _load="1" style="">
+                                </div>
+                                <div id="tube1">
+                                    <h2 style="color: white;">回壓管</h2>
+                                    <p>回壓管藉由隔板、消音器或管內的容積變化，產生一般返回汽缸的壓力，當引擎點火爆炸、將活塞往下推動接著排氣門開啟時，從排氣管返回的壓力便會擋住廢氣衝出，使燃燒壓力可以持續將活塞推往下死點。
+                                        反之回壓過高的話，則會造成廢氣無法排出汽缸導致進氣效率低落，因而降低燃燒效率，影響引擎動力輸出。</p>
+                                    <strong>優點</strong>
+                                    <p>安靜且低速反應佳</p>
+                                    <strong>缺點</strong>
+                                    <p>影響高轉動力輸出</p>
+                                    <p>在一切條件設定妥善的前提之下，改裝排氣管確實有增加性能的效果，其中的原理從何而來？答案是回壓，什麼是回壓？回壓是氣體前進時同時對後方氣體造成的壓力，要知道，引擎的排氣並不是一氣喝成，而是一次一次、一團一團的氣團，氣團的密度甚高，並且前方氣團和後方氣團之間將形成負壓狀態，假如氣團之間的距離適當，中間的負壓會吸引下一顆氣團，形成一種往前方牽引的力量，所以排氣順暢，引擎力量得以發揮，這就是適當的回壓。
+                                        反之，氣團與氣團之間距離太進，前方氣團將阻礙後方氣團的前進，也就是排氣阻礙，妨礙引擎轉速的上升，這就是回壓過大，也就是所謂的「排氣管塞住了」。再者，假如氣團之間的距離太遠，前方氣團吸不了後方氣團，這也會造成排氣的阻抗，限制性能的提升，這就是「管子太通」，也就是回壓不足。
+                                        任何一顆引擎都需要適當的回壓，才能發揮最大的功效，而排氣管的第一個作用是，「維持穩定的回壓」，為引擎排氣行程提供適當的環境，這就是排氣管與回壓的關係。</p>
+                                    <p>附上回壓管的細說圖</p>
+                                    <img src="https://forum.jorsindo.com/data/attachment/forum/forumid_11/20091118_915f05b5e7bec64e9290Qg3cGcg2QZtN.jpg">
+                                    <img src="https://forum.jorsindo.com/data/attachment/forum/forumid_11/20091118_233a2d2518da332cfc38RDRPkngM0NBS.jpg">
+                                </div>
+                            </div>
+                            <div id="light">
+                                <div id="light0">
+                                    <p>曾經問過機車行的老闆，改裝車燈到底合法不合法，得到的答案坦白說我覺得有一點模糊，來這邊也有先爬了一些文，似乎是差不多的答案。</p>
+                                    <p>我目前統整的答案就是，台灣機車改燈就是不合法，但警察沒事不會抓你，除非你的燈改了顏色或嚴重打鳥，才會把你攔下來關切。</p>
+                                    <p>朝"安全"的LED頭燈產品來做研究 重點就是以下兩點：</p>
+                                    <p>1. 白光的色溫不能太高，範圍在5700K~6000K最好，越高會越藍就越危險!!</p>
+                                    <p>2. 不能打鳥，所以光型最好是要有切線。</p>
+                                    <p>以下是網路上的許多產品，提供大家參考</p>
+                                    <p>(一) Philips X-treme Ultinon</p>
+                                    <img style="cursor: pointer;"src="https://forum.jorsindo.com/data/attachment/forum/201712/15/101826lybba4saecuav6y6.png.thumb.jpg">
+                                    <p>此產品具備如下不打鳥的特性 因為光型有設計過，可以看到他LED付近有一個小小的燈杯。</p>
+                                    <img style="cursor: pointer;"src="https://forum.jorsindo.com/data/attachment/forum/201712/15/102127bb9iz0m7a5exxu9x.jpg.thumb.jpg">
+                                    <p>但缺點是色溫6200K 超過6000K 感覺會有一點風險.... 不知道 會不會太白 吸引警察的注意? 還有就是 價格有點貴...
+                                        先前有在促銷 兩顆燈還要NTD5,990 現在沒去查價錢 不確定最新售價 有興趣的朋友 可自行去網路查一下。</p>
+                                    <p>(二) ADI 小魚眼</p>
+                                    <img style="cursor: pointer;" src="https://forum.jorsindo.com/data/attachment/forum/201712/15/105818hozgokffauhdfauu.png.thumb.jpg" alt="">
+                                    <p>跟Philips一樣也是主打不打鳥，有切線，甚至強調有ECE R112。做了點功課學習到ECE R112是歐洲的車燈法規，針對安全性有規範出光型的輪廓、亮度...等，順便分享一下自己好奇去查了大陸的法規叫GB，美國的法規叫SAE，至於為什麼ADI強調ECE，
+                                        似乎是因為台灣雖然沒有正式規範，但都是以ECE做為參考標準?? 只是改燈就是不合法，有這參考標準的意義就不是太清楚?<br>
+                                        白光色溫5700K 挺安全的，售價NTD 1,800比Philips X-treme Ultinon還便宜，是個可以考慮的產品。<br>
+                                        但先前問了改裝行的老闆，似乎我預計想買的Yamaha Force無法安裝，原因是規格不符，Force只能搭配H7的燈。<br>
+                                        後來得知ADI會有新改款，可惜還是只能搭配H4，而且比第一代貴，要NTD 2,400，但還是比Philips X-treme Ultinon便宜就是了!!<br>
+                                        若是H4車主，ADI一代 1,800 就還算蠻親民的!! 不過提醒只吃直流電唷!! 很多舊車吃交流電 大部分LED燈是都沒辦法裝的！</p>
+                                    <p>(三)星爵G8</p>
+                                    <img style="cursor: pointer;" src="https://forum.jorsindo.com/data/attachment/forum/201712/15/111222bv7in7v4c1no9y91.jpg.thumb.jpg" alt="">
+                                    <p>我本身就是有換這個燈泡，亮度很可以，而且也合法，但比起一些非法的亮燈泡稍微貴了一點，我當初購買一顆是2500~2800的樣子</p>
+                                    <p>Youtube上還看到有人分享 光型的效果 感覺還不錯... 色溫這樣看起來頗溫和 不會醒目 應該也差不多在6000K以下。</p>
+                                    <a href="https://www.youtube.com/watch?v=r2SrhwZE5Ck" target="_blank">https://www.youtube.com/watch?v=r2SrhwZE5Ck</a>
+                                    <p>另外廠商做的影片還蠻酷炫的</p>
+                                    <a href="https://www.youtube.com/watch?v=964a8bjCBIU" target="_blank">https://www.youtube.com/watch?v=964a8bjCBIU</a>
+                                </div>
+                                <div id="light1">
+                                    <p>改魚眼者+HID 必看<br>
+                                        很多人已經裝魚眼+HID 了吧<br>
+                                        遇到警察臨檢 不用監理站的人陪同 就可以直接開你罰單!<br>
+                                        依據 交通管理處罰條例 第18條 規定擅自更改HID頭燈責令驗車....或繳3600元罰單.<br>
+                                        也有 更多人 直接 改HID 直上配個安定器, 沒改魚眼燈具  結果是真的很亮 也很 刺眼瞎到爆..<br>
+                                        照很大的結過是造成 對向被射的看不見..很想去砸那車燈..(很多人有這經驗吧?)<br>
+                                    </p>
+                                    <p>請大家先搞清楚你為了什麼而改?</p>
+                                    <p>每年都有人18歲</p>
+                                    <p>每年都有人改車</p>
+                                    <p>每年都有人改HID</p>
+                                    <p>但是你弄懂了嗎?</p>
+                                    <p>魚眼是一種燈具，燈具就是決定照在地上光的形狀的東西</p>
+                                    <p>HID是一種燈泡，燈泡就是決定照在地上光的亮度的東西</p>
+                                    <p>燈具部分</p>
+                                    <p>燈具可以分為傳統的反射面與魚眼兩部分</p>
+                                    <p>在魚眼部分可以分為兩大類</p>
+                                    <p>第一大類為鹵素魚眼&nbsp;&nbsp; 例如2002~2009年的Mazda3&nbsp;&nbsp; 2007年~現在的Ford focus柴油運動旗艦版&nbsp; 2008年~現在的Ford mondeo旗艦版&nbsp; 他們都是魚眼頭燈 但是是專門給鹵素燈泡裝的</p>
+                                    <p>第二大類為HID魚眼&nbsp;&nbsp; 例如 現行的FERRARI全車系 PORSCHE全車系 LAMBORGHINI全車系&nbsp;&nbsp;&nbsp; 這些車的魚眼頭燈都是專門給HID用的</p>
+                                    <p>然後會為了方便&nbsp;&nbsp;&nbsp; 而在前面多加上燈泡規格一起稱呼&nbsp;&nbsp;&nbsp;&nbsp; 例如&nbsp; H7魚眼&nbsp;&nbsp;&nbsp;我自己本身也有使用過H7的魚眼燈泡</p>
+                                    <p>反射面部分也是分兩大類</p>
+                                    <p>第一類為一般鹵素燈泡用&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 例如 2004年的BMW 520i&nbsp;&nbsp; 2000年的M.benz C-class</p>
+                                    <p>第二類為HID特殊設計專用&nbsp;&nbsp;&nbsp;例如 2007~2010年的TOYOTA Altis&nbsp;&nbsp; 2006~2010 Honda civic&nbsp; 這些車種頭燈為一般反射面&nbsp;&nbsp; 但是都精心設計過不會刺向對向來車</p>
+                                    <p>對於HID燈泡的改裝，因為亮度真的太高，以至於對象的人會刺眼，即使配合燈具的使用也還是一樣，我認為改車還是要有一定的目的性，對於帥還是跟風我覺得要有一定的上限，畢竟改車也不是一筆小錢，何況是非法的改裝</p>
+                                    <p>根據法規記載：「頭燈應為單燈式，或二燈式對稱裝設。燈色可為白色會是淡黃色，二燈式左右燈色應一致。裝設位置：近光燈照明面距地高在空車裝態時，
+                                        上緣應在1.2公尺以下；下緣應在0.5公尺以上。」另外燈光的焦距也應在集中在車前牆壁高度1.2到0.5公尺之間。另外，在今年7月1日起，針對機車變更HID，登記時所應備的證件，
+                                        和相關規範，也都有相當明確規定。根據法規記載：「中華民國97年7月1日後申請變更氣體放電式頭燈，須經機器腳踏車車廠出具改裝證明文件，其氣體放電頭燈應使用車輛式安全審驗合格之燈具（泡），經公路檢驗機關依第四目氣體放電勢頭燈檢驗標準檢驗合格，辦理合更變登記。
+                                        」也就是說，只要是合格廠商所推出的燈具，經過交通部委託的檢驗機構（ARTC）檢驗合格，便可以備妥證件資料，向監理處辦理變更。</p>
+                                    <p>監理站的意思是:只要是合法取得的投射式燈具(魚眼)以及HID電氣設備(有發票)，有通過檢驗文件證明，經過合格改裝廠改裝一樣要發票，帶齊行照身分證保險卡就可以去辦理變更手續!<br>
+                                        <strong><font size="6"><font color="Magenta"><marquee width="90%" behavior="alternate" scrollamount="3">真的有那麼簡單嗎?</marquee></font></font></strong>
+                                        改裝店家的証明文件取得並不難問題就在於目前有ARTC檢驗合格的的燈管(泡) 有 ,但沒有檢驗合格的燈具(魚眼) 因為沒廠商送ARTC檢驗  所以 打死也拿不出此部分的檢驗証明文件.<br>
+                                        所以目前根本無法將機車頭燈改裝合格 合法化!就算你魚眼光型都合乎安全不造成對向刺眼...也是一樣被臨檢必吃罰單.<br>
+                                        尤其是 那些只改HID，不上魚眼...以目前機車用的反射式燈具..燈型100%刺眼反光 一定招惹警察的關心.也危害他人安全.</p>
+                                </div>
+                            <div id="inner">
+                                <div id="transmission">
+                                    <p>傳動傳動～ＣＶＴ的博大精深讓許多人始終摸不透</p>
+                                    <p>也產生了非常多的"謬論"來讓剛開始玩車的小屁孩白花錢</p>
+                                    <p>我以Q&A的方式讓大家了解傳動的改裝</p>
+                                    <div id="Q&A">
+                                        <h2 style="color: white;">油耗篇</h2>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改完傳動油耗上升很正常嗎？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：正確的傳動設定，並不會上升太多油耗，國產車ＡＬＴＩＳ從四速自排到ＣＶＴ模擬七速，油耗不僅變好了也有更好的性能表現</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">全世界的交通工具優化變速系統後，都是幾乎同理，唯獨改裝機車傳動對很多人來說一直都是高油耗的保證？這絕對是錯誤的</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：那改完傳動的油耗多少才是正常？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：用最簡單的道理去想，改傳動組與你的引擎以及供油系統都沒有關連，噴油嘴該噴多少油完全沒有改變，為何會有高油耗？</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">正確的傳動設定應該是＂拉轉迅速到應該到達的最佳工作轉速＂，用引擎＂最有力＂的轉速去推動車輛，並非白白浪費高轉油量，那怎麼會有很大的差異？</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：那為什麼我改完傳動有高油耗？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：傳動設置與油耗、性能有非常大的關聯，往往店家在改裝傳動時會加硬大彈簧過頭，讓油門反應非常好</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">但在＂普麗珠→普利盤→推動皮帶→皮帶拉動開閉盤開始變速＂這個過程中會產生很大的阻力，加重了車輛附載</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">讓油耗、傳動壽命都非常差，否則你花高單價買的傳動哪一組不強調材質很好卻比原廠壽命還低呢？以及過量輕量化的時候，</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">讓傳輸系統缺乏慣性，看似馬力大了卻讓慣性消失＝車量持續性推動力量消失</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><img loading="lazy" alt="" height="337" src="https://pic.pimg.tw/cold92312/1539077632-2682380436_n.jpg" title="改傳動,半套傳動,全套傳動,離合器,開閉盤,普利盤,大彈簧,尾速,勁戰,BWS,五代,改裝引擎,MANY,雷霆,雷霆S,G6,SMAX,FORCE,SMRT,城北,WF,加速,高雄機車維修,高雄機車保養,高雄機車改裝" width="600" style="width: 530px; height: 298px;"></p>
+                                        <h2 style="color: white;">耐用度篇</h2>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動的壽命會比原廠減少嗎？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：哪一間廠商不強調材質超越原廠，為何耐用度會少？</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：那為什麼我在其他地方改完傳動後常常斷皮帶？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：傳動設定錯誤導致的＂高附載＂是最常發現的原因，其次還有盤面角度不正確導致皮帶不正確模損（日本ＢＡＮＤＯ皮帶對於保固的定義要皮帶與盤面角度相同）為次要常見原因</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：為什麼我後組的很常有粉塵皮很快就沒了＆碗公很快就過熱變色？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：因為你選用的碗公款式內紋導致皮的磨損會比直溝或平面款式的碗公來的快，打滑少的離合器組絕對很耐用</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：為什麼普麗珠很長磨損？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：彈簧過硬普麗珠很難推動盤面＆皮帶＆大彈簧導致的</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：我的改裝普利盤為什麼磨損很快？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：廠商強調材質多好怎會比原廠差呢，但從配置上來說不正確的彈簧過硬導致的盤面受力很大，再耐用的材質都會減低壽命</span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="color:#FF0000"><span style="font-size:16px">Ｑ：我的改裝大彈簧好容易軟掉？為什麼？</span></span></p>
+                                        <p style="margin: 0px 0px 0px 12px; padding: 0px;"><span style="font-size:16px">Ａ：配傳動安裝新的大彈簧，使用一段時間之後會軟一些，在經過長久使用之後才會更軟，若配置的大彈簧需求為＋１５％硬度，請選用硬一點點的產品（衰退後才為＋１５％硬度）</span></p>
+                                        <span style="font-size:16px"><img loading="lazy" alt="" height="337" src="https://pic.pimg.tw/cold92312/1539080655-3159595533_n.jpg" title="改傳動,半套傳動,全套傳動,離合器,開閉盤,普利盤,大彈簧,尾速,勁戰,BWS,五代,改裝引擎,MANY,雷霆,雷霆S,G6,SMAX,FORCE,SMRT,城北,WF,加速,高雄機車維修,高雄機車保養,高雄機車改裝" width="600" style="width: 530px; height: 298px;"></span>
+                                        <h2>騎乘感受篇</h2>
+                                        <p><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動只能選擇起中或是中尾速嗎？</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：ＡＬＴＩＳ從四速改為ＣＶＴ之後起／中／尾／油耗都沒有比較差不是嗎？尾速些許提升３～１０ＫＭ，加速快這樣就是好設定</span></p>
+                                        <p><span style="font-size:16px"><span style="color:#FF0000">Ｑ：改裝傳動組好麻車，為什麼？</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：良好的傳輸效率不可能會導致＂麻振＂，而麻車最大的問題往往來自於＂高附載設定＂伴隨著高油耗以及低耐用度，請趕快檢查</span></p>
+                                        <p><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動組起步會抖，為什麼？</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：速可達的小油門低速騎乘（時速０～２０油門開度１０％內）輕微抖動屬於正常，這是先天ＣＶＴ系統的問題，但如果抖動比原廠大許多，建議你檢查配置</span></p>
+                                        <p><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動組好難騎，油門半開就＂綁綁的＂，油門全開就很快</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：這是彈簧高附載設定的問題，同時會導致麻振感一起發生</span></p>
+                                        <p><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動起步很衝，尾速的轉速好高但時速不高甚至比原廠差？</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：回去配傳動吧，你的轉速配過頭了，或是彈簧附載太大＆檔位錯誤都有可能</span></p>
+                                        <p><span style="color:#FF0000"><span style="font-size:16px">Ｑ：改裝傳動接合轉速好高，感覺很耗油</span></span></p>
+                                        <p><span style="font-size:16px">Ａ：接合轉速設定都約在４～５０００轉，如果高於此轉速建議你傳動配置變更一下，除非你有＂彈射起步＂的需求</span></p>
+                                        <p>&nbsp;</p>
+                                        <p><span style="font-size: small;">不過傳動組這裡面的花樣學問五花八門，上面所說的僅僅只是一些些『皮毛』，真的要討論起來，還真的是說都說不完............................<img loading="lazy" src="http://tw.yimg.com/i/tw/blog/smiley/1.gif" alt=""></span></p>
+                                    </div>
+                                </div>
+                                <div id="cylinder">
+                                    <h2>改缸在改車裡面算是一種對動力提升最多的方法，但同時也是最傷車的</h2>
+                                    <p>簡單來說這裡有一個圖解來先讓大家了解:<a href="https://www.facebook.com/notes/%E7%A6%BE%E5%80%89%E6%8A%80%E7%A0%94/%E4%BD%A0%E5%B0%8D%E5%8B%95%E5%8A%9B%E6%94%B9%E8%A3%9D%E6%87%82%E5%A4%9A%E5%B0%91-%E6%94%B9%E7%BC%B8qa%E5%A4%A7%E5%85%A8%E4%BE%86%E4%BA%86/626425640705789/" target="_blank">改缸圖片介紹</a></p>
+                                    <strong style="color: white;">初步介紹</strong>
+                                    <p>要改變機車的c.c數就是以"汽缸"+"曲軸"去做改變</p>
+                                    <p>這是汽缸頭</p>
+                                    <img alt="110.jpg" border="0" src="https://pic.pimg.tw/cold92312/1432030945-3003874072_n.jpg" title="58.5,63,420條,300條,大改,勁戰,凸輪,全套,單套,馬力,扭力,尾速,TTMRC,城北,WF,SMRT,SS,高凸,加大氣門,引擎耐用度,油耗,高轉速,點火,全取代,改裝電腦" style="width: 530px; height: 353px;">
+                                    <p>這是曲軸</p>
+                                    <img alt="142.jpg" border="0" src="https://pic.pimg.tw/cold92312/1432032146-672551345_n.jpg" title="58.5,63,420條,300條,大改,勁戰,凸輪,全套,單套,馬力,扭力,尾速,TTMRC,城北,WF,SMRT,SS,高凸,加大氣門,引擎耐用度,油耗,高轉速,點火,全取代,改裝電腦" style="width: 530px; height: 299px;">
+                                    <p>改變c.c數的原理</p>
+                                    <img alt="引擎cc數.jpg" border="0" src="https://pic.pimg.tw/cold92312/1432033494-124991571_n.jpg" title="引擎cc數.jpg">
+                                    <p>範例以勁戰原廠來做解說</p>
+                                    <p>上兩圖中~下面為圓餅~也就是曲軸~桃紅色則是曲軸連桿~連接活塞~看不懂可以回去最上面教育部得圖片複習一下<br>&nbsp;</p>
+                                    <p>上面為汽缸+活塞</p>
+                                    <p>綠色的為活塞 ~<br>
+                                        原廠是52.4MM (直徑)<br>
+                                        曲軸行程為57.9(上下死點距離)</p>
+                                    <p>那我們可以看到在<br>
+                                        上左圖(下死點)也就是曲軸運行到最下方</p>
+                                    <p>上右圖(上死點)也就是曲軸運行到最上方</p>
+                                    <p>活塞位置隨著曲軸的上下死點距離改變~</p>
+                                    <p>這時我們就可以看到~下右圖 活塞最上下點的距離~也就是我們說的CC數(左圖紅色方塊)</p>
+                                    <p>先算出(活塞)圓形截面積 = 半徑*半徑*圓周率</p>
+                                    <p>52.4/2=26.2</p>
+                                    <p>26.2*26.2*3.1416=2156.519904</p>
+                                    <p>再來套入原廠的曲軸行程長度57.9</p>
+                                    <p>2156.519904X57.9=124862.50244</p>
+                                    <p>再除以1000~ = 124.86cc<strong>就得到勁戰的c.c數了</strong></p>
+                                    <h2>總結</h2>
+                                    <p>改缸的問題太多了，問題都是慢慢的浮現，吃機油、曲軸壞、供油不順nogo、縮缸、引擎異音...[一大堆]<br>改完馬上出問題，則是店家問題。</p>
+                                    <p>耐用度也比原廠差很多，輕則三萬公里內出現引擎問題，重則一萬內出狀況。<br>好一點的是吃機油，壞的則是爆缸、壞曲軸打壞引擎內一堆東西。</p>
+                                    <p>如果還是想要改，可以先從傳動來解決你要的加速感，或是更換馬力更大的車，但絕對不要改引擎。<br>燈系電系那些壞掉修理都好辦事，經濟負擔也不大<br>引擎壞掉修理的費用高的恐怖，何必花錢改缸受罪</p>
+                                </div>
+                            </div>
+                            <div id="security">
+                                <div id="absorber">
+                                    <p>要改避震器?先了解他的使用原理是什麼</p>
+                                    <p>首先避震器(油壓)的大致上構造分為阻尼&彈簧&油</p>
+                                    <p>也是阻尼設計＆彈簧來使零件發揮"避震"的效果</p>
+                                    <p>彈簧的效果：支撐車體＆人體的重量，遇到坑洞時（避震器壓縮後開始回潭時）則會"回彈"</p>
+                                    <p>阻尼的效果：遇到坑洞時，控制避震油的流速＆流量</p>
+                                    <p>兩者之間必須相互協調，才能達成完美的避震效果</p>
+                                    <p>避震器壓縮時（遇到坑洞避震器"變短"）彈簧以及阻尼機構同時發揮效用，彈簧與阻尼同時控制下沉速度</p>
+                                    <p>避震器延伸時（遇到坑洞避震器變短又"變回正常長度"）彈簧把避震器回彈（伸），阻尼則控制彈簧回彈的速度</p>
+                                    <p>而坑洞結束回到平面時：阻尼則控制彈簧不要壓縮＆回彈多次造成不穩定晃動感</p>
+                                    <p>而這時候，聰明的人們希望一組避震器有不同的組合效果，所以發明出了各種可調機構</p>
+                                    <p>從最基本的"預載可調"開始介紹起</p>
+                                    <p>所謂的預載可調指的是"控制彈簧初始的壓縮量"</p>
+                                    <p>同時會"微量"改變車高</p>
+                                    <p>汽車避震器因為"車身總體重量"的問題，駕駛者以及乘坐者的人數對於車身重量的總影響"比機車來的小很多"</p>
+                                    <p>但機車重量１００～１５０公斤不等，有載人＆沒載人的差異則高達了７０％以上</p>
+                                    <img src="https://pic.pimg.tw/cold92312/1545397960-1500641115_n.jpg"width="600" style="width: 530px; height: 353px;">
+                                    <p>我們可看到"上方的圓盤有螺牙可以轉動"，越往下鎖預載越強（避震器初始壓縮越多）</p>
+                                    <img src="https://pic.pimg.tw/cold92312/1545402497-3183174495_n.jpg" width="600" style="width: 530px; height: 265px;">
+                                    <p>A的部分就是"SAG"，B的部分是"總行程"</p>
+                                    <p>而預載可調的用處就在這裡，設定正確的SAG(下沉量)，使避震器提供良好的初始支撐性</p>
+                                    <p>再來的是阻尼可調，阻尼可調分為"非常多種方式"</p>
+                                    <img src="https://pic.pimg.tw/cold92312/1545402704-3871855327_n.jpg" width="600" style="width: 530px; height: 298px;">
+                                    <p>我們看到下方的紅色星行旋鈕就是阻尼可調的機構</p>
+                                    <p>大家在改組尼，就是變油的流速流量，而所謂的阻尼可調也就是可以藉由調整機構來控制"油"的流量以及流速</p>
+                                    <p>再往上一階的避震器則會增加了氮氣瓶</p>
+                                    <p>增加氮氣瓶的用意在於～當避震器"油"是一種控制做動的介質時，我們再加入空氣這個介質，則擁有了更"多元化的"調整方向</p>
+                                    <p>因為空氣與油的可壓縮力道＆程度並不相同，造就了更好的舒適性（多了空氣緩衝），可調整從預載＆阻尼又多了一個氣瓶壓縮磅數</p>
+                                    <p>小資升級:前叉&阻尼&彈簧&油品更換+後避震器基本款(10000搞定)</p>
+                                    <P>進階升級:前叉內管總成更換+後避震器中階款(15000~20000)</P>
+                                 </div>
+                                <div id="caliper">
+                                    <h2>機車煞車改裝大迷思：改了對四煞車距離比較短</h2>
+                                    <img src="https://images.zi.org.tw/incar/2019/06/24185202/1561373522-d3c1114a3aeb21cf687cb511251cd902.jpg" style="width: 530px; height: 353px;">
+                                    <strong>強化煞車會縮短煞車距離嗎？</strong>
+                                    <p>煞車制動的目的可以分成三種：目標性煞車（前方紅燈停止）、緊急煞車（最短煞車距離）、調配速度（彎前減速）。其中追求短距離將車輛停下的緊急煞車，是一般認知中需要強大制動力的情況，但實際上強化了制動系統，卻不見得能有效縮短最短煞車距離。因為不論是改裝卡鉗、加大碟盤或是換上磨擦係數更高的來令片，雖然能提昇煞車系統的制動力，但實際上一台車的煞車距離，卻不只是仰賴制動系統，還要在劇烈減速下，輪胎能夠保持抓地力沒有鎖死。</p>
+                                    <p>沒錯，再強的制動力，一但超過輪胎極限也是英雄無用武之地，因此受制於輪胎自身極限，大多數車款的原廠煞車來說，煞車系統都已經足以鎖死輪胎了，因此即使強化制動能力，在一般公路速限下的車輛最短煞車距離並不能獲得提升，除非也換上抓地力更好的輪胎。先前Moto7利用Qstarz進行AK550和TMAX 530的煞車測試，AK550的卡鉗是Brembo製品，活塞比TMAX 530的雙子星更大，同時AK550搭配280mm的碟盤，也大過TMAX的267mm碟盤，帳面上看來，AK550的煞車距離似乎比較短。但實際上在輪胎極限上，同樣全力煞至ABS作動的情況，兩者只有0.02秒的差異。</p>
+                                    <strong>那為什麼要改裝煞車？</strong>
+                                    <p>改裝煞車系統對於車輛來說帶來真正的助益是操控，也就是說我要改裝的目的是為了更好的煞車手感，雖然在同樣情況下，輪胎能承受的制動力是一樣，但透過煞車系統的改裝，可以讓制動力變得更好掌握。透過好的煞車系統，在進行調配速度上，能更精準的控制制動力道，進彎前的減速更加有效、滑順。同時對於煞車掌握度沒那麼好的騎士來說，改裝得當的制動系統，在沒有ABS的情況下需要緊急煞車，也會更容易控制，並在實務上獲得更短的煞車距離。</p>
+                                    <p>另外如果車輛有像是在賽道這樣超高速行駛需求的話，有些原廠搭配的煞車系統確實無法負荷這樣的高速煞車，在初期減速力非常弱，真的會有種煞不住的感覺，這是也是需要透過改裝煞車來改善。除此之外，改裝來令、卡鉗、碟盤都可能讓煞車系統有更好的散熱與耐高溫能力，對於需要時常使用煞車的騎士來說，也能提供更穩定的制動性能的表現。</p>
+                                    <strong>總結</strong>
+                                    <p>因此改裝煞車系統，在理輪上對於縮短最短煞車距離的幫助不大，但改裝煞車系統確實能在車輛騎乘安全性獲得提升，但必須是以合乎使用習慣的改裝才能事半功倍，並非一眛的選擇最貴最大的產品，沒有適當的匹配，不但煞車手感會比原廠更差，整個制動力可能不會獲得提昇。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div id="show_introdcuebuy">
+                            <h1>專案分享</h1>
+                            <p>因為專案幾乎都到年底截止，所以等新年再統一做整理</p>
+                        </div>
+                        <div id="show_share">
+                            <h1>參考資料:</h1>
+                            <p><a href="https://www.goyomoney.com.tw/blog/motorcycle/1805/" target="_blank">https://www.goyomoney.com.tw/blog/motorcycle/1805/</a></p>
+                            <p><a href="https://hiromishi.com/2016/09/gogoro.html" target="_blank">https://hiromishi.com/2016/09/gogoro.html</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/21225247-%E6%A9%9F%E8%BB%8A%E6%94%B9%E8%A3%9D%E5%8E%9F%E7%90%86%3A%E6%8E%92%E6%B0%A3%E7%AE%A1%E7%9A%84%E5%9B%9E%E5%A3%93%E6%98%AF%E7%94%9A%E9%BA%BC%3F" target="_blank">http://cold92312.pixnet.net/blog/post/21225247-%E6%A9%9F%E8%BB%8A%E6%94%B9%E8%A3%9D%E5%8E%9F%E7%90%86%3A%E6%8E%92%E6%B0%A3%E7%AE%A1%E7%9A%84%E5%9B%9E%E5%A3%93%E6%98%AF%E7%94%9A%E9%BA%BC%3F</a></p>
+                            <p><a href="https://forum.jorsindo.com/thread-2153994-1-3.html" target="_blank">https://forum.jorsindo.com/thread-2153994-1-3.html</a></p>
+                            <p><a href="https://www.facebook.com/KITA.HOKO/posts/742627339091259/" target="_blank">https://www.facebook.com/KITA.HOKO/posts/742627339091259/</a></p>
+                            <p><a href="https://forum.jorsindo.com/thread-2522430-1-1.html" target="_blank">https://forum.jorsindo.com/thread-2522430-1-1.html</a></p>
+                            <p><a href="https://forum.jorsindo.com/thread-14147-1-1.html" target="_blank">https://forum.jorsindo.com/thread-14147-1-1.html</a></p>
+                            <p><a href="https://bbs.saycoo.com/thread-245776-1-1.html" target="_blank">https://bbs.saycoo.com/thread-245776-1-1.html</a></p>
+                            <p><a href="https://www.mobile01.com/topicdetail.php?f=415&t=5124242" target="_blank">https://www.mobile01.com/topicdetail.php?f=415&t=5124242</a></p>
+                            <p><a href="https://shinji770826.pixnet.net/blog/post/31404889" target="_blank">https://shinji770826.pixnet.net/blog/post/31404889</a></p>
+                            <p><a href="https://www.mobile01.com/topicdetail.php?f=415&t=5515707" target="_blank">https://www.mobile01.com/topicdetail.php?f=415&t=5515707</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/207790618-%E6%A9%9F%E8%BB%8A%E5%8B%95%E5%8A%9B%E6%94%B9%E8%A3%9D%E5%BB%BA%E8%AD%B0%E9%A0%86%E5%BA%8F" target="_blank">http://cold92312.pixnet.net/blog/post/207790618-%E6%A9%9F%E8%BB%8A%E5%8B%95%E5%8A%9B%E6%94%B9%E8%A3%9D%E5%BB%BA%E8%AD%B0%E9%A0%86%E5%BA%8F</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/15551566-cvt%28%e6%a9%9f%e8%bb%8a%e5%82%b3%e5%8b%95%29%e8%ae%8a%e9%80%9f%e5%9f%ba%e7%a4%8e%e7%90%86%e5%bf%b5-%e9%9b%a2%e5%90%88%e5%99%a8%e4%bb%a5%e5%8f%8a%e9%9b%a2%e5%90%88%e5%99%a8" target="_blank">http://cold92312.pixnet.net/blog/post/15551566-cvt%28%e6%a9%9f%e8%bb%8a%e5%82%b3%e5%8b%95%29%e8%ae%8a%e9%80%9f%e5%9f%ba%e7%a4%8e%e7%90%86%e5%bf%b5-%e9%9b%a2%e5%90%88%e5%99%a8%e4%bb%a5%e5%8f%8a%e9%9b%a2%e5%90%88%e5%99%a8</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/category/410839" target="_blank">http://cold92312.pixnet.net/blog/category/410839</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/222576162-%e6%94%b9%e8%a3%9d%e5%82%b3%e5%8b%95%e5%b8%b8%e8%a6%8b%e7%9a%84%e9%8c%af%e8%aa%a4%ef%bc%8c%e4%b8%8d%e8%a6%81%e5%86%8d%e8%aa%aa%e6%94%b9%e8%a3%9d%e8%80%97%e6%b2%b9%e4%b8%8d%e8%80%90" target="_blank">http://cold92312.pixnet.net/blog/post/222576162-%e6%94%b9%e8%a3%9d%e5%82%b3%e5%8b%95%e5%b8%b8%e8%a6%8b%e7%9a%84%e9%8c%af%e8%aa%a4%ef%bc%8c%e4%b8%8d%e8%a6%81%e5%86%8d%e8%aa%aa%e6%94%b9%e8%a3%9d%e8%80%97%e6%b2%b9%e4%b8%8d%e8%80%90</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/category/492358" target="_blank">http://cold92312.pixnet.net/blog/category/492358</a></p>
+                            <p><a href="https://www.7car.tw/articles/read/54420" target="_blank">https://www.7car.tw/articles/read/54420</a></p>
+                            <p><a href="https://jakey172.pixnet.net/blog/post/274502219" target="_blank">https://jakey172.pixnet.net/blog/post/274502219</a></p>
+                            <p><a href="http://cold92312.pixnet.net/album/photo/1297225" target="_blank">http://cold92312.pixnet.net/album/photo/1297225</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/28701472-%25e6%25a9%259f%25e8%25bb%258a%25e6%2594%25b9%25e8%25a3%259d%25e5%258e%259f%25e7%2590%2586-cc%25e6%2595%25b8%25e8%25a8%2588%25e7%25ae%2597%25e6%2596%25b9%25e5%25bc%258f-%25e6%2594%25b9%25e7%25bc%25b8%252b%25e6%2594%25b9%25e6%258b%2589%25e8%25a1%258c%25e7%25a8%258b%25e6%259b%25b2" target="_blank">http://cold92312.pixnet.net/blog/post/28701472-%25e6%25a9%259f%25e8%25bb%258a%25e6%2594%25b9%25e8%25a3%259d%25e5%258e%259f%25e7%2590%2586-cc%25e6%2595%25b8%25e8%25a8%2588%25e7%25ae%2597%25e6%2596%25b9%25e5%25bc%258f-%25e6%2594%25b9%25e7%25bc%25b8%252b%25e6%2594%25b9%25e6%258b%2589%25e8%25a1%258c%25e7%25a8%258b%25e6%259b%25b2</a></p>
+                            <p><a href="https://utuilkj.pixnet.net/blog/post/42086223" target="_blank">https://utuilkj.pixnet.net/blog/post/42086223</a></p>
+                            <p><a href="https://forum.jorsihttp://cold92312.pixnet.net/blog/post/28701472-%25e6%25a9%259f%25e8%25bb%258a%25e6%2594%25b9%25e8%25a3%259d%25e5%258e%259f%25e7%2590%2586-cc%25e6%2595%25b8%25e8%25a8%2588%25e7%25ae%2597%25e6%2596%25b9%25e5%25bc%258f-%25e6%2594%25b9%25e7%25bc%25b8%252b%25e6%2594%25b9%25e6%258b%2589%25e8%25a1%258c%25e7%25a8%258b%25e6%259b%25b2ndo.com/thread-2394780-1-4.html" target="_blank">https://forum.jorsihttp://cold92312.pixnet.net/blog/post/28701472-%25e6%25a9%259f%25e8%25bb%258a%25e6%2594%25b9%25e8%25a3%259d%25e5%258e%259f%25e7%2590%2586-cc%25e6%2595%25b8%25e8%25a8%2588%25e7%25ae%2597%25e6%2596%25b9%25e5%25bc%258f-%25e6%2594%25b9%25e7%25bc%25b8%252b%25e6%2594%25b9%25e6%258b%2589%25e8%25a1%258c%25e7%25a8%258b%25e6%259b%25b2ndo.com/thread-2394780-1-4.html</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/222910248-%E6%A9%9F%E8%BB%8A%E6%94%B9%E8%A3%9D%E9%81%BF%E9%9C%87%E5%99%A8%EF%BC%9F%E9%98%BB%E5%B0%BC%EF%BC%9F%E5%BD%88%E7%B0%A7%EF%BC%9F%E9%A0%90%E8%BC%89%E5%8F%AF%E8%AA%BF%EF%BC%9F%E4%B8%80" target="_blank">http://cold92312.pixnet.net/blog/post/222910248-%E6%A9%9F%E8%BB%8A%E6%94%B9%E8%A3%9D%E9%81%BF%E9%9C%87%E5%99%A8%EF%BC%9F%E9%98%BB%E5%B0%BC%EF%BC%9F%E5%BD%88%E7%B0%A7%EF%BC%9F%E9%A0%90%E8%BC%89%E5%8F%AF%E8%AA%BF%EF%BC%9F%E4%B8%80</a></p>
+                            <p><a href="http://cold92312.pixnet.net/blog/post/213790750-%E4%B8%8D%E8%8A%B1%E9%8C%A2%E6%94%B9%E8%A3%9D%EF%BC%8C%E6%94%B9%E8%AE%8A%E4%BD%BF%E7%94%A8%E7%BF%92%E6%85%A3%E4%BD%A0%E5%B0%B1%E8%83%BD%E6%93%81%E6%9C%89%E6%9B%B4%E5%BC%B7%E7%9A%84" target="_blank">http://cold92312.pixnet.net/blog/post/213790750-%E4%B8%8D%E8%8A%B1%E9%8C%A2%E6%94%B9%E8%A3%9D%EF%BC%8C%E6%94%B9%E8%AE%8A%E4%BD%BF%E7%94%A8%E7%BF%92%E6%85%A3%E4%BD%A0%E5%B0%B1%E8%83%BD%E6%93%81%E6%9C%89%E6%9B%B4%E5%BC%B7%E7%9A%84</a></p>
+                            <p><a href="https://www.moto7.net/2018/02/brake-disc-4.html" target="_blank">https://www.moto7.net/2018/02/brake-disc-4.html</a></p>
+                            <p><a href="https://incar.tw/post/motorcycle-brake-distance" target="_blank">https://incar.tw/post/motorcycle-brake-distance</a></p>
+                            <strong>文章擷取以上資料</strong>
+                        </div>
+                    <footer>
+                        <div class="social-btns" id="contact">
+                                <a class="btn facebook" href="#"><i class="fa fa-facebook"></i></a>
+                                <a class="btn twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                <a class="btn google" href="#"><i class="fa fa-google"></i></a>
+                                <a class="btn instagram" href="#"><i class="fa fa-instagram"></i></a>
+                                <a class="btn pinterest" href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </footer>
+    </body>
+</html>

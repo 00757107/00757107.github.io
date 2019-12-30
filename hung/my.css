@@ -1,0 +1,189 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+.navFixed {
+    z-index: 10;          
+    position: fixed;      
+    top: 0;
+    left: 0;
+    margin-top: 0;
+    min-width:auto;
+    opacity: 0.94;
+    transition: opacity .5s ease-out;   
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid black; */
+    background-image: url("https://gss0.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/zhidao/pic/item/2e2eb9389b504fc2d4e1fb73e3dde71190ef6d0d.jpg");
+    /* background-color: white; */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#show_introduce {
+    width: 100%;
+    height: 700px;
+    background-color: black;
+    border: 2px solid white;
+}
+#show_introduce *{
+    /* border: 2px solid white; */
+}
+div #fifty {
+    /* border: 2px solid black; */
+    width: 100%;
+    color: cornsilk;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+}
+#textfif {
+    /* border: 2px solid white; */
+    width: 50%;
+    position: relative;
+    text-decoration: none;
+    float: left;
+}
+#pic {
+    position: relative;
+    width: 50%;
+    float: right;
+    height: 100%;
+}
+#fifty span {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+#hundred {
+    text-align: center;
+}
+#hundred span,p{
+    font-size: 16px;
+    /* text-align: center; */
+    color: whitesmoke;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: Tahoma, Arial, Serif;
+    border-radius:2px;
+}
+table caption {
+    color: yellow;
+}
+table td,th {
+    border: 1px solid silver;
+}
+table tr {
+    text-align:center;
+    font-size:8vm;
+    color: gray;
+    padding:10px;
+    background:white;
+    font-weight:normal;
+    border: 1px solid silver; 
+    height: 50px;
+}
+table tr:hover {
+    transition: ease-out 0.07s;
+    color: #383838 ;
+    background: #FFFFCC;
+}
+table th {
+    font-size:8vm;
+    color:white;
+    padding:10px;
+    background:gray;
+    font-weight:normal;
+    border: 1px solid silver; 
+    border-bottom: 3px solid silver;
+    height: 50px;
+}
+#show_gogoro {
+    background-color:black;
+}
+#summary {
+    width: 300px;
+    border: 2px solid silver;
+    float: left;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+#summary a {
+    text-decoration: none;
+    color: chocolate;
+}
+#summary a:hover {
+    color: sandybrown;
+    font-family: fantasy;
+}
+#howmuch {
+    width: 50%;
+    text-align: center;
+}
+#discount {
+    width: 50%;
+}
+#howmuch strong {
+    color:white;
+    float: left;
+}
+#show_gogoro h2 {
+    color: sandybrown;
+}
+#whybuy span {
+    float: left;
+}
+#disturb {
+    width: 50%;
+}
+#dontbuy {
+    width: 50%;
+}
+#show_outfit {
+    background-color: rgb(20, 1, 1);
+    width: 50%;
+    font-family: inherit;
+    font-size: medium;
+}
+#show_introdcuebuy{
+    color: rgb(3, 3, 3);
+    background-color: rgb(250, 250, 250);
+    position: relative;
+}
+#show_introdcuebuy p{
+    color: black;
+}
+#show_share {
+    background-color: peru;
+    position: relative;
+    
+}
+#show_share a {
+    
+    text-decoration: none;
+    color: brown;
+}
+#show_share a:hover {
+    color:black;
+    font-family: monospace;
+    font-weight: bold;
+}
+#contact {
+    background-color: white;
+}
+#cylinder h2 {
+    color: white;
+}
